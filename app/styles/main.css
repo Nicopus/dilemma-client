@@ -101,22 +101,24 @@ body {
     font-size: 14px;
 }
 
+
 .label-cirkel {
-    width: 50px;
-    height: 50px;
+    width: 75px;
+    height: 75px;
     text-align: center;
     font-size: 24px;
     line-height: 1;
-    border-radius: 25px;
+    border-radius: 35px;
+    padding-top: 6px;
 }
 
 .btn-circle {
-    width: 100px;
-    height: 100px;
+    width: 75px;
+    height: 75px;
     text-align: center;
-    font-size: 48px;
+    font-size: 36px;
     line-height: 1;
-    border-radius: 50px;
+    border-radius: 38px;
     border-width: 5px;
 }
 
@@ -239,6 +241,18 @@ body {
 }
 .grid5 .col-md-5 {
   width: 100.0%;
+}
+
+a.list-group-item .list-group-item-heading,
+button.list-group-item .list-group-item-heading {
+  color: #555;
+}
+
+h3 {
+  color: #555;
+}
+p {
+  color: #555;
 }
 
 

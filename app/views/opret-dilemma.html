@@ -1,14 +1,14 @@
-<h2>Skriv spørgsmål</h2>
+<h3>Skriv spørgsmål</h2>
 <p>Her skal der stå eb beskrivende tekst om hvad spørgsmål er!</p>
 <div class="form-group">
-	<textarea class="form-control noresize" rows="2" id="comment"></textarea>
+	<textarea ng-model="dilemma.quest" class="form-control noresize" rows="2" id="comment"></textarea>
 </div>
-<h2>Uddyb dilemma</h2>
+<h3>Uddyb dilemma</h2>
 <p>Her skal der stå eb beskrivende tekst om hvad uddyb er!</p>
 <div class="form-group">
-	<textarea class="form-control noresize" rows="3" id="comment"></textarea>
+	<textarea ng-model="dilemma.desc" class="form-control noresize" rows="3" id="comment"></textarea>
 </div>
-<h2>Vælg alvorsgrad</h2>
+<h3>Vælg alvorsgrad</h2>
 <p>Her skal der stå eb beskrivende tekst om hvad alvorsgrad er!</p>
 <div class="row grid5">
 	<div class="col-md-1 text-center">
@@ -27,7 +27,7 @@
 		<button type="button" class="btn btn-circle btn-gravity5">5</button>
 	</div>
 </div>
-<h2>Indtast valgmuligheder</h2>
+<h3>Indtast valgmuligheder</h2>
 <p>Her skal der stå eb beskrivende tekst om hvad alvorsgrad er!</p>
 <div class="row grid5">
 	<div class="col-md-1 text-center">
@@ -64,51 +64,49 @@
 	</div>
 </div>  
 <p></p>  
-<div class="input-group input-group-lg">
+<div class="input-group input-group">
 	<span class="input-group-addon" id="sizing-addon1">Valgmulighed 1</span>
-	<input type="text" class="form-control" aria-describedby="sizing-addon1">
+	<input type="text" ng-model="dilemma.opt1" class="form-control" aria-describedby="sizing-addon1">
 	<span class="input-group-btn">
-		<button class="btn btn-default" type="button">Tilføj billede 1</button>
+		<button class="btn btn-primary" type="button">Tilføj billede 1</button>
 	</span>
 </div>
 <p></p>
-<div class="input-group input-group-lg">
+<div class="input-group input-group">
 	<span class="input-group-addon" id="sizing-addon1">Valgmulighed 2</span>
-	<input type="text" class="form-control" aria-describedby="sizing-addon1">
+	<input type="text" ng-model="dilemma.opt2" class="form-control" aria-describedby="sizing-addon1">
 	<span class="input-group-btn">
-		<button class="btn btn-default" type="button">Tilføj billede 2</button>
+		<button class="btn btn-primary" type="button">Tilføj billede 2</button>
 	</span>
 </div>
 <p></p>
-<div class="input-group input-group-lg">
+<div class="input-group input-group">
 	<span class="input-group-addon" id="sizing-addon1">Valgmulighed 3</span>
-	<input type="text" class="form-control" aria-describedby="sizing-addon1">
+	<input type="text" ng-model="dilemma.opt3" class="form-control" aria-describedby="sizing-addon1">
 	<span class="input-group-btn">
-		<button class="btn btn-default" type="button">Tilføj billede 3</button>
+		<button class="btn btn-primary" type="button">Tilføj billede 3</button>
 	</span>
 </div>
 <p></p>
-<div class="input-group input-group-lg">
+<div class="input-group input-group">
 	<span class="input-group-addon" id="sizing-addon1">Valgmulighed 4</span>
-	<input type="text" class="form-control" aria-describedby="sizing-addon1">
+	<input type="text" ng-model="dilemma.opt4" class="form-control" aria-describedby="sizing-addon1">
 	<span class="input-group-btn">
-		<button class="btn btn-default" type="button">Tilføj billede 4</button>
+		<button class="btn btn-primary" type="button">Tilføj billede 4</button>
 	</span>
 </div>
 <p></p>
-<div class="input-group input-group-lg">
+<div class="input-group input-group">
 	<span class="input-group-addon" id="sizing-addon1">Valgmulighed 5</span>
-	<input type="text" class="form-control" aria-describedby="sizing-addon1">
+	<input type="text" ng-model="dilemma.opt5" class="form-control" aria-describedby="sizing-addon1">
 	<span class="input-group-btn">
-		<button class="btn btn-default" type="button">Tilføj billede 5</button>
+		<button class="btn btn-primary" type="button">Tilføj billede 5</button>
 	</span>
 </div>
-<div class="row">
-	<div class="col-xs-12" style="height:50px;"></div>
-</div>
+<br><br>
 <div class="row">
 <div class="col-md-12 text-center">
-	<button type="button" class="btn btn-success btn-lg">Opret Dilemma</button>
+	<button type="button" ng- click="opretDilemma(dilemma)" class="btn btn-success btn-lg">Opret Dilemma</button>
 </div>
 </div>
 <br>
