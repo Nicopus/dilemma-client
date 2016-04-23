@@ -44,15 +44,7 @@
                 <li><a ng-href="#opret-dilemma/">Opret nyt Dilemma!</a></li>
               </ul>
               <div ng-controller="LoginCtrl">
-                <form novalidate class="navbar-form navbar-right">
-                  <div class="form-group">
-                    <input type="text" ng-model="user.username" placeholder="Brugernavn" class="form-control">
-                  </div>
-                  <div class="form-group">
-                    <input type="password" ng-model="user.password" placeholder="Kodeord" class="form-control">
-                  </div>
-                  <button type="submit" ng-click="login(user)" class="btn btn-success">Login</button>
-                </form>
+                <div bind-html-compile="context"></div>
               </div>
             </div>
           </div>
@@ -92,6 +84,8 @@
      <script src="bower_components/angular-route/angular-route.js"></script>
      <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
      <script src="bower_components/angular-touch/angular-touch.js"></script>
+     <script src="bower_components/angular-bind-html-compile/angular-bind-html-compile.js"></script>
+     <script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
      <!-- endbower -->
      <!-- endbuild -->
 
@@ -103,6 +97,7 @@
      <script src="scripts/controllers/om-dilemma.js"></script>
      <script src="scripts/controllers/svar-dilemma.js"></script>
      <script src="scripts/controllers/login.js"></script>
+     <script src="scripts/directives/htmldata.js"></script>
      <!-- endbuild -->
    </body>
    </html>
