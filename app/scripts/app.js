@@ -41,6 +41,11 @@ angular
         controller: 'SvarDilemmaCtrl',
         controllerAs: 'svarDilemma'
       })
+      .when('/me', {
+        templateUrl: 'views/me.html',
+        controller: 'MeCtrl',
+        controllerAs: 'me'
+      })
       .otherwise({
         redirectTo: '/'
       });

@@ -34,8 +34,10 @@ angular.module('dilemmaApp')
         var token = data.token;
         if(token){
           $scope.context = logout_html;
+          //sletter token hvis den allerede eksistere
+          localStorageService.remove('tok');
           //gemmer token
-          localStorageService.set('tok', token);
+          localStorageService.set('tok', token.toString());
         }
         else {
           $scope.user.username = "wrong";
@@ -50,6 +52,7 @@ angular.module('dilemmaApp')
       $scope.context = login_html;
       $scope.user.username = '';
       $scope.user.password = '';
+      localStorageService.remove('tok');
     }
 
   });
