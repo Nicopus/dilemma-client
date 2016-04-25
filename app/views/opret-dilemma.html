@@ -1,117 +1,55 @@
-<h3>Skriv spørgsmål</h2>
-<p>Her skal der stå eb beskrivende tekst om hvad spørgsmål er!</p>
-<div class="form-group">
-	<textarea ng-model="dilemma.quest" class="form-control noresize" rows="2" id="comment"></textarea>
-</div>
-<h3>Uddyb dilemma</h2>
-<p>Her skal der stå eb beskrivende tekst om hvad uddyb er!</p>
-<div class="form-group">
-	<textarea ng-model="dilemma.desc" class="form-control noresize" rows="3" id="comment"></textarea>
-</div>
-<h3>Vælg alvorsgrad</h2>
-<p>Her skal der stå eb beskrivende tekst om hvad alvorsgrad er!</p>
-<div class="row grid5">
-	<div class="col-md-1 text-center">
-		<button type="button" class="btn btn-circle btn-gravity1" data-toggle="button" aria-pressed="false" autocomplete="off">1</button>
+<p>{{test}}</p>
+<form novalidate>
+	<h3>Skriv spørgsmål</h2>
+	<p>Her skal der stå eb beskrivende tekst om hvad spørgsmål er!</p>
+	<div class="form-group">
+		<textarea ng-model="dilemma.quest" class="form-control noresize" rows="2" id="comment"></textarea>
 	</div>
-	<div class="col-md-1 text-center">
-		<button type="button" class="btn btn-circle btn-gravity2" data-toggle="button" aria-pressed="false" autocomplete="off">2</button>
+	<h3>Uddyb dilemma</h2>
+	<p>Her skal der stå eb beskrivende tekst om hvad uddyb er!</p>
+	<div class="form-group">
+		<textarea ng-model="dilemma.desc" class="form-control noresize" rows="3" id="comment"></textarea>
 	</div>
-	<div class="col-md-1 text-center">
-		<button type="button" class="btn btn-circle btn-gravity3" data-toggle="button" aria-pressed="false" autocomplete="off">3</button>
-	</div>
-	<div class="col-md-1 text-center">
-		<button type="button" class="btn btn-circle btn-gravity4" data-toggle="button" aria-pressed="false" autocomplete="off">4</button>
-	</div>
-	<div class="col-md-1 text-center">
-		<button type="button" class="btn btn-circle btn-gravity5" data-toggle="button" aria-pressed="false" autocomplete="off">5</button>
-	</div>
-</div>
-<h3>Indtast valgmuligheder</h2>
-<p>Her skal der stå eb beskrivende tekst om hvad alvorsgrad er!</p>
-<div class="row grid5">
-	<div class="col-md-1 text-center">
-		<img data-src="holder.js/200x200" class="img-thumbnail" alt="200x200" data-holder-rendered="true" style="width: 120px; height: 120px;">
-	</div>
-	<div class="col-md-1 text-center">
-		<img data-src="holder.js/200x200" class="img-thumbnail" alt="200x200" data-holder-rendered="true" style="width: 120px; height: 120px;">
-	</div>
-	<div class="col-md-1 text-center">
-		<img data-src="holder.js/200x200" class="img-thumbnail" alt="200x200" data-holder-rendered="true" style="width: 120px; height: 120px;">
-	</div>
-	<div class="col-md-1 text-center">
-		<img data-src="holder.js/200x200" class="img-thumbnail" alt="200x200" data-holder-rendered="true" style="width: 120px; height: 120px;">
-	</div>
-	<div class="col-md-1 text-center">
-		<img data-src="holder.js/200x200" class="img-thumbnail" alt="200x200" data-holder-rendered="true" style="width: 120px; height: 120px;">
-	</div>
-</div>
-<div class="row grid5">
-	<div class="col-md-1 text-center">
-		<p>Billede 1</p>
-	</div>
-	<div class="col-md-1 text-center">
-		<p>Billede 2</p>
-	</div>
-	<div class="col-md-1 text-center">
-		<p>Billede 3</p>
-	</div>
-	<div class="col-md-1 text-center">
-		<p>Billede 4</p>
-	</div>
-	<div class="col-md-1 text-center">
-		<p>Billede 5</p>
-	</div>
-</div>  
-<p></p>  
-<div class="input-group input-group">
+	<p></p>
+	<div class="input-group input-group">
 	<span class="input-group-addon" id="sizing-addon1">Valgmulighed 1</span>
 	<input type="text" ng-model="dilemma.opt1" class="form-control" aria-describedby="sizing-addon1">
 	<span class="input-group-btn">
 		<button class="btn btn-primary" type="button">Tilføj billede 1</button>
 	</span>
-</div>
-<p></p>
-<div class="input-group input-group">
+	</div>
+	<p></p>
+	<div class="input-group input-group">
 	<span class="input-group-addon" id="sizing-addon1">Valgmulighed 2</span>
 	<input type="text" ng-model="dilemma.opt2" class="form-control" aria-describedby="sizing-addon1">
 	<span class="input-group-btn">
 		<button class="btn btn-primary" type="button">Tilføj billede 2</button>
 	</span>
-</div>
-<p></p>
-<div class="input-group input-group">
+	</div>
+	<p></p>
+	<div class="input-group input-group">
 	<span class="input-group-addon" id="sizing-addon1">Valgmulighed 3</span>
 	<input type="text" ng-model="dilemma.opt3" class="form-control" aria-describedby="sizing-addon1">
 	<span class="input-group-btn">
 		<button class="btn btn-primary" type="button">Tilføj billede 3</button>
 	</span>
-</div>
-<p></p>
-<div class="input-group input-group">
+	</div>
+	<p></p>
+	<div class="input-group input-group">
 	<span class="input-group-addon" id="sizing-addon1">Valgmulighed 4</span>
 	<input type="text" ng-model="dilemma.opt4" class="form-control" aria-describedby="sizing-addon1">
 	<span class="input-group-btn">
 		<button class="btn btn-primary" type="button">Tilføj billede 4</button>
 	</span>
-</div>
-<p></p>
-<div class="input-group input-group">
+	</div>
+	<p></p>
+	<div class="input-group input-group">
 	<span class="input-group-addon" id="sizing-addon1">Valgmulighed 5</span>
 	<input type="text" ng-model="dilemma.opt5" class="form-control" aria-describedby="sizing-addon1">
 	<span class="input-group-btn">
 		<button class="btn btn-primary" type="button">Tilføj billede 5</button>
 	</span>
-</div>
-<br><br>
-<div class="row">
-<div class="col-md-12 text-center">
-	<button type="button" ng- click="opretDilemma(dilemma)" class="btn btn-success btn-lg">Opret Dilemma</button>
-</div>
-</div>
-<br>
-<br>
-
-
-
-
+	</div>
+	<br>
+	<button type="submit" ng-click="create(dilemma)" class="btn btn-success">Opret</button>
+</form>
