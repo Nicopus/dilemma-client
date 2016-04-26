@@ -9,15 +9,26 @@
  */
  angular.module('dilemmaApp')
  .controller('OpretDilemmaCtrl', function ($scope, $http, localStorageService) {
-
+ //
    $scope.test = localStorageService.get('tok');
+
+   $scope.dilemma = {
+     quest : 'spg',
+     desc : 'd',
+     alvor : 2,
+     p_answers : [
+       {text : 'test'},
+       {text : 'test2'}
+     ]
+   };
+
 
    $scope.create = function(dilemma){
      $http.post("http://localhost:3001/d/opret",{
        "token" : localStorageService.get('tok'),
        "name" : dilemma.quest,
        "desc" : dilemma.desc,
-       "alvor" : 2,
+       "alvor" : dilemma.alvor,
        "p_answers" : [{"text" : "her2"}, {"text" : "her3"}]
      })
      .success(function(data, status, headers, config){
