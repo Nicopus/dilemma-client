@@ -8,7 +8,7 @@
  * Controller of the dilemmaApp
  */
  angular.module('dilemmaApp')
- .controller('OpretDilemmaCtrl', function ($scope, $http, localStorageService) {
+ .controller('OpretDilemmaCtrl', function ($scope, $http, $timeout, localStorageService, Upload) {
  //
    $scope.test = localStorageService.get('tok');
 
@@ -22,22 +22,44 @@
      ]
    };
 
-
    $scope.create = function(dilemma){
-     $http.post("http://localhost:3001/d/opret",{
-       "token" : localStorageService.get('tok'),
-       "name" : dilemma.quest,
-       "desc" : dilemma.desc,
-       "alvor" : dilemma.alvor,
-       "p_answers" : [{"text" : "her2"}, {"text" : "her3"}]
-     })
-     .success(function(data, status, headers, config){
-       $scope.test = "done";
-     })
-     .error(function(data, status, headers, config){
-       $scope.test = data;
+     var files = [];
+     if($scope.picfile1){
+       files.push($scope.picfile1)
+     }
+     if($scope.picfile2){
+       files.push($scope.picfile2)
+     }
+     if($scope.picfile3){
+       files.push($scope.picfile3)
+     }
+     if($scope.picfile4){
+       files.push($scope.picfile5)
+     }
+     if($scope.picfile5){
+       files.push($scope.picfile5)
+     }
 
-     });
+     Upload.upload({
+       url : 'http://localhost:3001/d/opret',
+       headers : {'token' : localStorageService.get('tok')},
+       data : {
+         file : files,
+         "token" : localStorageService.get('tok'),
+         "name" : dilemma.quest,
+         "desc" : dilemma.desc,
+         "alvor" : dilemma.alvor,
+         "p_answers" : [{"text" : "her2"}, {"text" : "her3"}]
+       }
+     }).then(function (resp) {
+          console.log('Success ' + resp.config.data.file.name + 'uploaded. Response: ' + resp.data);
+      }, function (resp) {
+          console.log('Error status: ' + resp.status);
+      }, function (evt) {
+          var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
+          console.log('progress: ' + progressPercentage + '% ' + evt.config.data.file.name);
+      });
+
    };
 
  });

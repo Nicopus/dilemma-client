@@ -17,7 +17,8 @@ angular
     'ngSanitize',
     'ngTouch',
     'angular-bind-html-compile',
-    'LocalStorageModule'
+    'LocalStorageModule',
+    'ngFileUpload'
   ])
   .config(function ($routeProvider) {
     $routeProvider

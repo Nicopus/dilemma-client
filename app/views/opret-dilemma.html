@@ -12,6 +12,7 @@
 	</div>
 	<div class="row grid5">
 	<div class="col-md-1 text-center">
+		<img ngf-thumbnail="picfile1" ngf-size="{width : 120, height : 120}">
 		<img src="/images/image-placeholder.png" class="img-thumbnail" alt="200x200" data-holder-rendered="true" style="width: 120px; height: 120px;">
 	</div>
 	<div class="col-md-1 text-center">
@@ -43,7 +44,7 @@
 	<div class="col-md-1 text-center">
 		<p>Billede 5</p>
 	</div>
-</div>  
+</div>
 
 	<p></p>
 	<div class="input-group input-group">
@@ -52,7 +53,7 @@
 	<span class="input-group-btn">
 		<span class="btn btn-primary btn-file" type="button">
 			Tilføj billede 1
-		<input type="file", name="pic1", accept="image/*">
+		<input type="file" ngf-select ng-model="picfile1" name="pic1" accept="image/*">
 	</span>
 	</span>
 	</div>
@@ -63,7 +64,7 @@
 	<span class="input-group-btn">
 		<span class="btn btn-primary btn-file" type="button">
 			Tilføj billede 2
-		<input type="file", name="pic2", accept="image/*">
+		<input type="file" ngf-select ng-model="picfile2" name="pic2" accept="image/*">
 	</span>
 	</span>
 	</div>
@@ -74,7 +75,7 @@
 	<span class="input-group-btn">
 		<span class="btn btn-primary btn-file" type="button">
 			Tilføj billede 3
-		<input type="file", name="pic3", accept="image/*">
+		<input type="file" ngf-select ng-model="picfile3" name="pic3" accept="image/*">
 	</span>
 	</span>
 	</div>
@@ -85,7 +86,7 @@
 	<span class="input-group-btn">
 		<span class="btn btn-primary btn-file" type="button">
 			Tilføj billede 4
-		<input type="file", name="pic4", accept="image/*">
+		<input type="file" ngf-select ng-model="picfile4" name="pic4" accept="image/*">
 	</span>
 	</span>
 	</div>
@@ -96,7 +97,7 @@
 	<span class="input-group-btn">
 		<span class="btn btn-primary btn-file" type="button">
 			Tilføj billede 5
-		<input type="file", name="pic5", accept="image/*">
+		<input type="file" ngf-select ng-model="picfile5" name="pic5" accept="image/*">
 	</span>
 	</span>
 	</div>
