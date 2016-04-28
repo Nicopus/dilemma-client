@@ -1,105 +1,108 @@
 <p>{{test}}</p>
-<form novalidate>
-	<h3>Skriv spørgsmål</h2>
+<form  name="dilemmaForm" novalidate>
+	<h3>Skriv spørgsmål</h3>
 	<p>Her skal der stå eb beskrivende tekst om hvad spørgsmål er!</p>
 	<div class="form-group">
 		<textarea ng-model="dilemma.quest" class="form-control noresize" rows="2" id="comment"></textarea>
 	</div>
-	<h3>Uddyb dilemma</h2>
+	<h3>Uddyb dilemma</h3>
 	<p>Her skal der stå eb beskrivende tekst om hvad uddyb er!</p>
 	<div class="form-group">
 		<textarea ng-model="dilemma.desc" class="form-control noresize" rows="3" id="comment"></textarea>
 	</div>
 	<div class="row grid5">
-	<div class="col-md-1 text-center">
-		<img ngf-thumbnail="picfile1" ngf-size="{width : 120, height : 120}">
-		<img src="/images/image-placeholder.png" class="img-thumbnail" alt="200x200" data-holder-rendered="true" style="width: 120px; height: 120px;">
+		<div class="col-md-1 text-center">
+			<img ngf-thumbnail="picfile1" ngf-size="{width : 120, height : 120}">
+			<img src="/images/image-placeholder.png" class="img-thumbnail" alt="200x200" data-holder-rendered="true" style="width: 120px; height: 120px;">
+			<p>Billede 1</p>
+
+		</div>
+		<div class="col-md-1 text-center">
+			<img ngf-thumbnail="picfile2" ngf-size="{width : 120, height : 120}">
+			<img src="/images/image-placeholder.png" class="img-thumbnail" alt="200x200" data-holder-rendered="true" style="width: 120px; height: 120px;">
+			<p>Billede 2</p>
+		</div>
+		<div class="col-md-1 text-center">
+			<img ngf-thumbnail="picfile3" ngf-size="{width : 120, height : 120}">
+			<img src="/images/image-placeholder.png" class="img-thumbnail" alt="200x200" data-holder-rendered="true" style="width: 120px; height: 120px;">
+			<p>Billede 3</p>
+		</div>
+		<div class="col-md-1 text-center">
+			<img ngf-thumbnail="picfile4" ngf-size="{width : 120, height : 120}">
+			<img src="/images/image-placeholder.png" class="img-thumbnail" alt="200x200" data-holder-rendered="true" style="width: 120px; height: 120px;">
+			<p>Billede 4</p>
+		</div>
+		<div class="col-md-1 text-center">
+			<img ngf-thumbnail="picfile5" ngf-size="{width : 120, height : 120}">
+			<img src="/images/image-placeholder.png" class="img-thumbnail" alt="200x200" data-holder-rendered="true" style="width: 120px; height: 120px;">
+			<p>Billede 5</p>
+		</div>
 	</div>
-	<div class="col-md-1 text-center">
-		<img src="/images/image-placeholder.png" class="img-thumbnail" alt="200x200" data-holder-rendered="true" style="width: 120px; height: 120px;">
-	</div>
-	<div class="col-md-1 text-center">
-		<img src="/images/image-placeholder.png" class="img-thumbnail" alt="200x200" data-holder-rendered="true" style="width: 120px; height: 120px;">
-	</div>
-	<div class="col-md-1 text-center">
-		<img src="/images/image-placeholder.png" class="img-thumbnail" alt="200x200" data-holder-rendered="true" style="width: 120px; height: 120px;">
-	</div>
-	<div class="col-md-1 text-center">
-		<img src="/images/image-placeholder.png" class="img-thumbnail" alt="200x200" data-holder-rendered="true" style="width: 120px; height: 120px;">
-	</div>
-</div>
-<div class="row grid5">
-	<div class="col-md-1 text-center">
-		<p>Billede 1</p>
-	</div>
-	<div class="col-md-1 text-center">
-		<p>Billede 2</p>
-	</div>
-	<div class="col-md-1 text-center">
-		<p>Billede 3</p>
-	</div>
-	<div class="col-md-1 text-center">
-		<p>Billede 4</p>
-	</div>
-	<div class="col-md-1 text-center">
-		<p>Billede 5</p>
-	</div>
-</div>
 
 	<p></p>
 	<div class="input-group input-group">
-	<span class="input-group-addon" id="sizing-addon1">Valgmulighed 1</span>
-	<input type="text" ng-model="dilemma.opt1" class="form-control" aria-describedby="sizing-addon1">
-	<span class="input-group-btn">
-		<span class="btn btn-primary btn-file" type="button">
-			Tilføj billede 1
-		<input type="file" ngf-select ng-model="picfile1" name="pic1" accept="image/*">
-	</span>
-	</span>
+		<span class="input-group-addon" id="sizing-addon1">Valgmulighed 1</span>
+		<div class="form-group">
+			<input type="text" ng-model="dilemma.opt1" class="form-control" name="opt1" aria-describedby="sizing-addon1" required>
+		</div>
+		<span class="input-group-btn">
+			<span class="btn btn-primary btn-file" type="button">
+				Tilføj billede 1
+				<input type="file" ngf-select ng-model="picfile1" name="pic1" accept="image/*">
+			</span>
+		</span>
 	</div>
 	<p></p>
 	<div class="input-group input-group">
-	<span class="input-group-addon" id="sizing-addon1">Valgmulighed 2</span>
-	<input type="text" ng-model="dilemma.opt2" class="form-control" aria-describedby="sizing-addon1">
-	<span class="input-group-btn">
-		<span class="btn btn-primary btn-file" type="button">
-			Tilføj billede 2
-		<input type="file" ngf-select ng-model="picfile2" name="pic2" accept="image/*">
-	</span>
-	</span>
+		<span class="input-group-addon" id="sizing-addon1">Valgmulighed 2</span>
+		<div class="form-group">
+			<input type="text" ng-model="dilemma.opt2" class="form-control" name="opt2" aria-describedby="sizing-addon1" required>
+		</div>
+		<span class="input-group-btn">
+			<span class="btn btn-primary btn-file" type="button">
+				Tilføj billede 2
+				<input type="file" ngf-select ng-model="picfile2" name="pic2" accept="image/*">
+			</span>
+		</span>
 	</div>
 	<p></p>
 	<div class="input-group input-group">
-	<span class="input-group-addon" id="sizing-addon1">Valgmulighed 3</span>
-	<input type="text" ng-model="dilemma.opt3" class="form-control" aria-describedby="sizing-addon1">
-	<span class="input-group-btn">
-		<span class="btn btn-primary btn-file" type="button">
-			Tilføj billede 3
-		<input type="file" ngf-select ng-model="picfile3" name="pic3" accept="image/*">
-	</span>
-	</span>
+		<span class="input-group-addon" id="sizing-addon1">Valgmulighed 3</span>
+		<div class="form-group">
+			<input type="text" ng-model="dilemma.opt3" class="form-control" name="opt3" aria-describedby="sizing-addon1" required>
+		</div>
+		<span class="input-group-btn">
+			<span class="btn btn-primary btn-file" type="button">
+				Tilføj billede 3
+				<input type="file" ngf-select ng-model="picfile3" name="pic3" accept="image/*">
+			</span>
+		</span>
 	</div>
 	<p></p>
 	<div class="input-group input-group">
-	<span class="input-group-addon" id="sizing-addon1">Valgmulighed 4</span>
-	<input type="text" ng-model="dilemma.opt4" class="form-control" aria-describedby="sizing-addon1">
-	<span class="input-group-btn">
-		<span class="btn btn-primary btn-file" type="button">
-			Tilføj billede 4
-		<input type="file" ngf-select ng-model="picfile4" name="pic4" accept="image/*">
-	</span>
-	</span>
+		<span class="input-group-addon" id="sizing-addon1">Valgmulighed 4</span>
+		<div class="form-group">
+			<input type="text" ng-model="dilemma.opt4" class="form-control" name="opt4" aria-describedby="sizing-addon1" required>
+		</div>
+		<span class="input-group-btn">
+			<span class="btn btn-primary btn-file" type="button">
+				Tilføj billede 4
+				<input type="file" ngf-select ng-model="picfile4" name="pic4" accept="image/*">
+			</span>
+		</span>
 	</div>
 	<p></p>
 	<div class="input-group input-group">
-	<span class="input-group-addon" id="sizing-addon1">Valgmulighed 5</span>
-	<input type="text" ng-model="dilemma.opt5" class="form-control" aria-describedby="sizing-addon1">
-	<span class="input-group-btn">
-		<span class="btn btn-primary btn-file" type="button">
-			Tilføj billede 5
-		<input type="file" ngf-select ng-model="picfile5" name="pic5" accept="image/*">
-	</span>
-	</span>
+		<span class="input-group-addon" id="sizing-addon1">Valgmulighed 5</span>
+		<div class="form-group">
+			<input type="text" ng-model="dilemma.opt5" class="form-control" name="opt5" aria-describedby="sizing-addon1" required>
+		</div>
+		<span class="input-group-btn">
+			<span class="btn btn-primary btn-file" type="button">
+				Tilføj billede 5
+				<input type="file" ngf-select ng-model="picfile5" name="pic5" accept="image/*">
+			</span>
+		</span>
 	</div>
 	<br>
 	<button type="submit" ng-click="create(dilemma)" class="btn btn-success">Opret</button>
