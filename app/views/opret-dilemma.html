@@ -10,12 +10,50 @@
 	<div class="form-group">
 		<textarea ng-model="dilemma.desc" class="form-control noresize" rows="3" id="comment"></textarea>
 	</div>
+	<div class="row grid5">
+	<div class="col-md-1 text-center">
+		<img src="/images/image-placeholder.png" class="img-thumbnail" alt="200x200" data-holder-rendered="true" style="width: 120px; height: 120px;">
+	</div>
+	<div class="col-md-1 text-center">
+		<img src="/images/image-placeholder.png" class="img-thumbnail" alt="200x200" data-holder-rendered="true" style="width: 120px; height: 120px;">
+	</div>
+	<div class="col-md-1 text-center">
+		<img src="/images/image-placeholder.png" class="img-thumbnail" alt="200x200" data-holder-rendered="true" style="width: 120px; height: 120px;">
+	</div>
+	<div class="col-md-1 text-center">
+		<img src="/images/image-placeholder.png" class="img-thumbnail" alt="200x200" data-holder-rendered="true" style="width: 120px; height: 120px;">
+	</div>
+	<div class="col-md-1 text-center">
+		<img src="/images/image-placeholder.png" class="img-thumbnail" alt="200x200" data-holder-rendered="true" style="width: 120px; height: 120px;">
+	</div>
+</div>
+<div class="row grid5">
+	<div class="col-md-1 text-center">
+		<p>Billede 1</p>
+	</div>
+	<div class="col-md-1 text-center">
+		<p>Billede 2</p>
+	</div>
+	<div class="col-md-1 text-center">
+		<p>Billede 3</p>
+	</div>
+	<div class="col-md-1 text-center">
+		<p>Billede 4</p>
+	</div>
+	<div class="col-md-1 text-center">
+		<p>Billede 5</p>
+	</div>
+</div>  
+
 	<p></p>
 	<div class="input-group input-group">
 	<span class="input-group-addon" id="sizing-addon1">Valgmulighed 1</span>
 	<input type="text" ng-model="dilemma.opt1" class="form-control" aria-describedby="sizing-addon1">
 	<span class="input-group-btn">
-		<button class="btn btn-primary" type="button">Tilføj billede 1</button>
+		<span class="btn btn-primary btn-file" type="button">
+			Tilføj billede 1
+		<input type="file", name="pic1", accept="image/*">
+	</span>
 	</span>
 	</div>
 	<p></p>
@@ -23,7 +61,10 @@
 	<span class="input-group-addon" id="sizing-addon1">Valgmulighed 2</span>
 	<input type="text" ng-model="dilemma.opt2" class="form-control" aria-describedby="sizing-addon1">
 	<span class="input-group-btn">
-		<button class="btn btn-primary" type="button">Tilføj billede 2</button>
+		<span class="btn btn-primary btn-file" type="button">
+			Tilføj billede 2
+		<input type="file", name="pic2", accept="image/*">
+	</span>
 	</span>
 	</div>
 	<p></p>
@@ -31,7 +72,10 @@
 	<span class="input-group-addon" id="sizing-addon1">Valgmulighed 3</span>
 	<input type="text" ng-model="dilemma.opt3" class="form-control" aria-describedby="sizing-addon1">
 	<span class="input-group-btn">
-		<button class="btn btn-primary" type="button">Tilføj billede 3</button>
+		<span class="btn btn-primary btn-file" type="button">
+			Tilføj billede 3
+		<input type="file", name="pic3", accept="image/*">
+	</span>
 	</span>
 	</div>
 	<p></p>
@@ -39,7 +83,10 @@
 	<span class="input-group-addon" id="sizing-addon1">Valgmulighed 4</span>
 	<input type="text" ng-model="dilemma.opt4" class="form-control" aria-describedby="sizing-addon1">
 	<span class="input-group-btn">
-		<button class="btn btn-primary" type="button">Tilføj billede 4</button>
+		<span class="btn btn-primary btn-file" type="button">
+			Tilføj billede 4
+		<input type="file", name="pic4", accept="image/*">
+	</span>
 	</span>
 	</div>
 	<p></p>
@@ -47,7 +94,10 @@
 	<span class="input-group-addon" id="sizing-addon1">Valgmulighed 5</span>
 	<input type="text" ng-model="dilemma.opt5" class="form-control" aria-describedby="sizing-addon1">
 	<span class="input-group-btn">
-		<button class="btn btn-primary" type="button">Tilføj billede 5</button>
+		<span class="btn btn-primary btn-file" type="button">
+			Tilføj billede 5
+		<input type="file", name="pic5", accept="image/*">
+	</span>
 	</span>
 	</div>
 	<br>

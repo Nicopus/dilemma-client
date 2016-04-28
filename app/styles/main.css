@@ -117,6 +117,7 @@ body {
     height: 75px;
     text-align: center;
     font-size: 36px;
+    font-weight: bold;
     line-height: 1;
     border-radius: 38px;
     border-width: 5px;
@@ -143,9 +144,9 @@ body {
 }
 
 .btn-gravity1 {
-    color: #fff;
-    background-color: #4DB6AC;
-    border-color: #00897B;
+    color: #4DB6AC;
+    background-color: #fff;
+    border-color: #4DB6AC;
 }
 
 .btn-gravity1:hover, 
@@ -154,14 +155,14 @@ body {
 .btn-gravity1.active, 
 .open .dropdown-toggle.btn-gravity1 { 
   color: #ffffff; 
-  background-color: #26A69A; 
-  border-color: #00897B;
+  background-color: #4DB6AC; 
+  
 } 
 
 .btn-gravity2 {
-    color: #fff;
-    background-color: #388E3C;
-    border-color: #1B5E20;
+    color: #388E3C;
+    background-color: #fff;
+    border-color: #388E3C;
 }
 
 .btn-gravity2:hover, 
@@ -170,14 +171,13 @@ body {
 .btn-gravity2.active, 
 .open .dropdown-toggle.btn-gravity2 { 
   color: #ffffff; 
-  background-color: #2E7D32; 
-  border-color: #1B5E20;
+  background-color: #388E3C; 
 }
 
 .btn-gravity3 {
-    color: #fff;
-    background-color: #FDD835;
-    border-color: #FBC02D;
+    color: #FDD835;
+    background-color: #fff;
+    border-color: #FDD835;
 }
 
 .btn-gravity3:hover, 
@@ -186,14 +186,13 @@ body {
 .btn-gravity3.active, 
 .open .dropdown-toggle.btn-gravity3 { 
   color: #ffffff; 
-  background-color: #F7CA02; 
-  border-color: #FBC02D;
+  background-color: #FDD835; 
 }
 
 .btn-gravity4 {
-    color: #fff;
-    background-color: #FF9800;
-    border-color: #EF6C00;
+    color: #FF9800;
+    background-color: #fff;
+    border-color: #FF9800;
 }
 
 .btn-gravity4:hover, 
@@ -202,14 +201,14 @@ body {
 .btn-gravity4.active, 
 .open .dropdown-toggle.btn-gravity5 { 
   color: #ffffff; 
-  background-color: #F57C00; 
-  border-color: #EF6C00;
+  background-color: #FF9800; 
+
 }
 
 .btn-gravity5 {
-    color: #fff;
-    background-color: #D32F2F;
-    border-color: #842828;
+    color: #D32F2F;
+    background-color: #fff;
+    border-color: #D32F2F;
 }
 
 .btn-gravity5:hover, 
@@ -218,8 +217,7 @@ body {
 .btn-gravity5.active, 
 .open .dropdown-toggle.btn-gravity5 { 
   color: #ffffff; 
-  background-color: #C62828; 
-  border-color: #842828;
+  background-color: #D32F2F; 
 }
 
 .col-centered{
@@ -256,7 +254,25 @@ p {
 }
 
 
-
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
 
 
 
