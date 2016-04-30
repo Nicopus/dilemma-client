@@ -8,7 +8,7 @@
  * Controller of the dilemmaApp
  */
  angular.module('dilemmaApp')
- .controller('OpretDilemmaCtrl', function ($scope, $http, $timeout, localStorageService, Upload) {
+ .controller('OpretDilemmaCtrl', function ($window, $scope, $http, $timeout, localStorageService, Upload) {
  //
  $scope.test = localStorageService.get('tok');
 
@@ -32,7 +32,7 @@
       files.push($scope.picfile1);
 
     }
-  } 
+  }
   if($scope.dilemmaForm.opt2.$valid) {
     options.push({"text" : dilemma.opt2});
     if($scope.picfile2) {
@@ -60,23 +60,33 @@
       files.push($scope.picfile5);
 
     }
-  } 
+  }
 
-  
+  //felter skal udfyldes. -> skal også gøres server-side
+  if(options.length < 2){
+    return;
+  }
+
 
   Upload.upload({
    url : 'http://localhost:3001/d/opret',
    headers : {'token' : localStorageService.get('tok')},
+   transformRequest: angular.identity,
+   objectKey : '.k',
+   arrayKey : '[i]',
    data : {
      file : files,
      "token" : localStorageService.get('tok'),
      "name" : dilemma.quest,
      "desc" : dilemma.desc,
      "alvor" : dilemma.alvor,
-     "p_answers" : [options]
+     "p_answers" : angular.toJson(options)
    }
  }).then(function (resp) {
-  console.log('Success ' + resp.config.data.file.name + 'uploaded. Response: ' + resp.data);
+   $scope.test = resp;
+   if(resp.data.success){
+    $window.location.href = '#/';
+   }
 }, function (resp) {
   console.log('Error status: ' + resp.status);
 }, function (evt) {
