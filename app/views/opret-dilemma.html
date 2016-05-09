@@ -10,6 +10,27 @@
 	<div class="form-group">
 		<textarea ng-model="dilemma.desc" class="form-control noresize" rows="3" id="comment"></textarea>
 	</div>
+	<h3>Vælg alvorsgrad</h3>
+	<p>Her skal der stå eb beskrivende tekst om hvad alvorsgrad er!</p>
+	<div class="row grid5">
+		<div class="col-md-1 text-center">
+			<button type="button" class="btn btn-circle btn-gravity1" ng-class="{true: '', false: 'active'}[dilemma.alvor!=1]" ng-click="dilemma.alvor = 1">1</button>
+		</div>
+		<div class="col-md-1 text-center">
+			<button type="button" class="btn btn-circle btn-gravity2" ng-class="{true: '', false: 'active'}[dilemma.alvor!=2]" ng-click="dilemma.alvor = 2">2</button>
+		</div>
+		<div class="col-md-1 text-center">
+			<button type="button" class="btn btn-circle btn-gravity3" ng-class="{true: '', false: 'active'}[dilemma.alvor!=3]" ng-click="dilemma.alvor = 3">3</button>
+		</div>
+		<div class="col-md-1 text-center">
+			<button type="button" class="btn btn-circle btn-gravity4" ng-class="{true: '', false: 'active'}[dilemma.alvor!=4]" ng-click="dilemma.alvor = 4">4</button>
+		</div>
+		<div class="col-md-1 text-center">
+			<button type="button" class="btn btn-circle btn-gravity5" ng-class="{true: '', false: 'active'}[dilemma.alvor!=5]" ng-click="dilemma.alvor = 5">5</button>
+		</div>
+	</div>
+	<h3>Indtast valgmuligheder</h3>
+	<p>Her skal der stå eb beskrivende tekst om hvad alvorsgrad er!</p>
 	<div class="row grid5">
 		<div class="col-md-1 text-center">
 			<img ngf-thumbnail="picfile1" ngf-size="{width : 120, height : 120}">
@@ -104,6 +125,11 @@
 			</span>
 		</span>
 	</div>
-	<br>
-	<button type="submit" ng-click="create(dilemma)" class="btn btn-success">Opret</button>
+	<br><br>
+	<div class="row">
+		<div class="col-md-12 text-center">
+			<button type="submit" class="btn btn-success btn-lg" ng-clicl="create(dilemma)">Opret Dilemma</button>
+		</div>
+	</div>
+	<br><br>
 </form>
