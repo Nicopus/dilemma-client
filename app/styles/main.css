@@ -86,67 +86,67 @@ body {
 }
 
 .navbar {
-    border-radius: 0px;
+  border-radius: 0px;
 }
 
 .progress {
-    position: relative;
+  position: relative;
 }
 
 .progress span {
-    position: absolute;
-    display: block;
-    width: 100%;
-    color: #333;
-    font-size: 14px;
+  position: absolute;
+  display: block;
+  width: 100%;
+  color: #333;
+  font-size: 14px;
 }
 
 
 .label-cirkel {
-    width: 75px;
-    height: 75px;
-    text-align: center;
-    font-size: 24px;
-    line-height: 1;
-    border-radius: 35px;
-    padding-top: 6px;
+  width: 75px;
+  height: 75px;
+  text-align: center;
+  font-size: 24px;
+  line-height: 1;
+  border-radius: 35px;
+  padding-top: 6px;
 }
 
 .btn-circle {
-    width: 75px;
-    height: 75px;
-    text-align: center;
-    font-size: 36px;
-    font-weight: bold;
-    line-height: 1;
-    border-radius: 38px;
-    border-width: 5px;
+  width: 75px;
+  height: 75px;
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 1;
+  border-radius: 38px;
+  border-width: 5px;
 }
 
 .label-gravity1 {
-    background-color: #4DB6AC;
+  background-color: #4DB6AC;
 }
 .label-gravity2 {
-    background-color: #388E3C;
+  background-color: #388E3C;
 }
 .label-gravity3 {
-    background-color: #FDD835;
+  background-color: #FDD835;
 }
 .label-gravity4 {
-    background-color: #FF9800;
+  background-color: #FF9800;
 }
 .label-gravity5 {
-    background-color: #D32F2F;
+  background-color: #D32F2F;
 }
 
 .noresize {
-    resize: none;
+  resize: none;
 }
 
 .btn-gravity1 {
-    color: #4DB6AC;
-    background-color: #fff;
-    border-color: #4DB6AC;
+  color: #4DB6AC;
+  background-color: #fff;
+  border-color: #4DB6AC;
 }
 
 .btn-gravity1:hover, 
@@ -160,9 +160,9 @@ body {
 } 
 
 .btn-gravity2 {
-    color: #388E3C;
-    background-color: #fff;
-    border-color: #388E3C;
+  color: #388E3C;
+  background-color: #fff;
+  border-color: #388E3C;
 }
 
 .btn-gravity2:hover, 
@@ -175,9 +175,9 @@ body {
 }
 
 .btn-gravity3 {
-    color: #FDD835;
-    background-color: #fff;
-    border-color: #FDD835;
+  color: #FDD835;
+  background-color: #fff;
+  border-color: #FDD835;
 }
 
 .btn-gravity3:hover, 
@@ -190,9 +190,9 @@ body {
 }
 
 .btn-gravity4 {
-    color: #FF9800;
-    background-color: #fff;
-    border-color: #FF9800;
+  color: #FF9800;
+  background-color: #fff;
+  border-color: #FF9800;
 }
 
 .btn-gravity4:hover, 
@@ -206,9 +206,9 @@ body {
 }
 
 .btn-gravity5 {
-    color: #D32F2F;
-    background-color: #fff;
-    border-color: #D32F2F;
+  color: #D32F2F;
+  background-color: #fff;
+  border-color: #D32F2F;
 }
 
 .btn-gravity5:hover, 
@@ -221,9 +221,10 @@ body {
 }
 
 .col-centered{
-    float: none;
-    margin: 0 auto;
+  float: none;
+  margin: 0 auto;
 }
+
 
 .grid5 .col-md-1 {
   width: 20.0%;
@@ -255,24 +256,36 @@ p {
 
 
 .btn-file {
-    position: relative;
-    overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
 .btn-file input[type=file] {
-    position: absolute;
-    top: 0;
-    right: 0;
-    min-width: 100%;
-    min-height: 100%;
-    font-size: 100px;
-    text-align: right;
-    filter: alpha(opacity=0);
-    opacity: 0;
-    outline: none;
-    background: white;
-    cursor: inherit;
-    display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  font-size: 100px;
+  text-align: right;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  outline: none;
+  background: white;
+  cursor: inherit;
+  display: block;
 }
+
+.navbar-form .form-control {
+  display: inline-block;
+  width: auto;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+
+
+
+
 
 
 

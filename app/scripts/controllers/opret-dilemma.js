@@ -9,18 +9,14 @@
  */
  angular.module('dilemmaApp')
  .controller('OpretDilemmaCtrl', function ($window, $scope, $http, $timeout, localStorageService, Upload) {
- 
- $scope.test = localStorageService.get('tok');
-
- $scope.activeGravity = $scope.bot1;
 
  $scope.dilemma = {
-   quest : 'spg',
-   desc : 'd',
+   quest : '',
+   desc : '',
    alvor : 0,
    p_answers : [
-   {text : 'test'},
-   {text : 'test2'}
+   {text : ''},
+   {text : ''}
    ]
  };
 
