@@ -1,27 +1,30 @@
+{{opt}}<br>
+{{test}}<br>
+{{stats}}<br>
+{{jsontest}}<br>
 <h2>
-	<span class="label label-gravity1 label-cirkel">1</span>
-	Dapibus ac facilisis in
+	<span class="label label-gravity{{dilemma.alvor}} label-cirkel">{{dilemma.alvor}}</span>
+	{{dilemma.name}}
 </h2>
-<p>This is a template showcasing the optional theme stylesheet included in Bootstrap. Use it as a starting point to create something more unique by building on or modifying it.</p>
-<div class="row grid5">
-
-	<div class="col-md-1">
-		<img data-src="holder.js/200x200" class="img-thumbnail" alt="200x200" data-holder-rendered="true" style="width: 190px; height: 190px;">
+<p>{{dilemma.desc}}</p>
+<div ng-if="!opt.answered" class="row grid5">
+	<div ng-repeat="item in dilemma.p_answers">
+		<div class="col-md-1">
+			<img src="{{item.pic}}" class="img-thumbnail" alt="No Picture for this Dilemma" style="width: 120px; height: 120px;">
+			<button type="button" ng-click="vote(item._id)" class="btn btn-lg btn-primary">{{item.text}}</button>
+		</div>
 	</div>
-	<div class="col-md-1 text-center">
-		<img data-src="holder.js/200x200" class="img-thumbnail" alt="200x200" data-holder-rendered="true" style="width: 190px; height: 190px;">
-	</div>
-	<div class="col-md-1 text-center">
-		<img data-src="holder.js/200x200" class="img-thumbnail" alt="200x200" data-holder-rendered="true" style="width: 190px; height: 190px;">
-	</div>
-	<div class="col-md-1 text-center">
-		<img data-src="holder.js/200x200" class="img-thumbnail" alt="200x200" data-holder-rendered="true" style="width: 190px; height: 190px;">
-	</div>
-	<div class="col-md-1 text-center">
-		<img data-src="holder.js/200x200" class="img-thumbnail" alt="200x200" data-holder-rendered="true" style="width: 190px; height: 190px;">
-	</div>
-
 </div>
-<br>
-
-<div bind-html-compile="context"></div>
+<div ng-if="opt.answered" class="row grid5">
+	<div ng-repeat="item in dilemma.p_answers">
+		<div class="col-md-1">
+			<img src="{{item.pic}}" class="img-thumbnail" alt="No Picture for this Dilemma" style="width: 120px; height: 120px;">
+			<div ng-repeat="a in stats.answers" ng-if="a.answer == item._id">
+				<p>{{a.count}} out of {{stats.info.total_count}}</p>
+				<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {{a.percent*100}}%;">
+					<span>{{item.text}}</span>
+				</div>
+			</div
+		</div>
+	</div>
+</div>

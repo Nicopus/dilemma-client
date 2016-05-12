@@ -1,115 +1,27 @@
 <br>
 <br>
+{{test}}
+{{items}}
 <div class="list-group">
-
-    <a href="#" class="list-group-item">
+  <div ng-repeat="item in items">
+    <a href="#/svar/{{item._id}}" class="list-group-item">
         <div class="row">
-            <div class="col-md-1"> 
+            <div class="col-md-1">
                 <h1 class="list-group-item-heading">
-                    <span class="label label-gravity1 label-cirkel">1</span>
+                    <span class="label label-gravity{{item.alvor}} label-cirkel">{{item.alvor}}</span>
                 </h1>
             </div>
             <div class="col-md-1"></div>
             <div class="col-md-11">
-                <h3 class="list-group-item-heading">Hall</h3>
+                <h3 class="list-group-item-heading">{{item.name}}</h3>
             </div>
             <div class="col-md-1"></div>
             <div class="col-md-11">
-                <p class="list-group-item-text">Something something sgbsbgr bsrgb bsrgb sbg bsrgb sbrg bsrgb srbg bsrgb sbgbsrgb srbg bsrgb srbg </p>
+                <p class="list-group-item-text">{{item.desc}}</p>
             </div>
         </div>
-
     </a>
-    <a href="#" class="list-group-item">
-        <div class="row">
-            <div class="col-md-1"> 
-                <h1 class="list-group-item-heading">
-                    <span class="label label-gravity2 label-cirkel">2</span>
-                </h1>
-            </div>
-            <div class="col-md-1"></div>
-            <div class="col-md-11">
-                <h3 class="list-group-item-heading">Hall</h3>
-            </div>
-            <div class="col-md-1"></div>
-            <div class="col-md-11">
-                <p class="list-group-item-text">Something something sgbsbgr bsrgb bsrgb sbg bsrgb sbrg bsrgb srbg bsrgb sbgbsrgb srbg bsrgb srbg </p>
-            </div>
-        </div>
-
-    </a>
-    <a href="#" class="list-group-item">
-        <div class="row">
-            <div class="col-md-1"> 
-                <h1 class="list-group-item-heading">
-                    <span class="label label-gravity3 label-cirkel">3</span>
-                </h1>
-            </div>
-            <div class="col-md-1"></div>
-            <div class="col-md-11">
-                <h3 class="list-group-item-heading">Hall</h3>
-            </div>
-            <div class="col-md-1"></div>
-            <div class="col-md-11">
-                <p class="list-group-item-text">Something something sgbsbgr bsrgb bsrgb sbg bsrgb sbrg bsrgb srbg bsrgb sbgbsrgb srbg bsrgb srbg </p>
-            </div>
-        </div>
-
-    </a>
-    <a href="#" class="list-group-item">
-        <div class="row">
-            <div class="col-md-1"> 
-                <h1 class="list-group-item-heading">
-                    <span class="label label-gravity4 label-cirkel">4</span>
-                </h1>
-            </div>
-            <div class="col-md-1"></div>
-            <div class="col-md-11">
-                <h3 class="list-group-item-heading">Hall</h3>
-            </div>
-            <div class="col-md-1"></div>
-            <div class="col-md-11">
-                <p class="list-group-item-text">Something something sgbsbgr bsrgb bsrgb sbg bsrgb sbrg bsrgb srbg bsrgb sbgbsrgb srbg bsrgb srbg </p>
-            </div>
-        </div>
-
-    </a>
-    <a href="#" class="list-group-item">
-        <div class="row">
-            <div class="col-md-1"> 
-                <h1 class="list-group-item-heading">
-                    <span class="label label-gravity5 label-cirkel">5</span>
-                </h1>
-            </div>
-            <div class="col-md-1"></div>
-            <div class="col-md-11">
-                <h3 class="list-group-item-heading">Hall</h3>
-            </div>
-            <div class="col-md-1"></div>
-            <div class="col-md-11">
-                <p class="list-group-item-text">Something something sgbsbgr bsrgb bsrgb sbg bsrgb sbrg bsrgb srbg bsrgb sbgbsrgb srbg bsrgb srbg </p>
-            </div>
-        </div>
-
-    </a>
-    <a href="#" class="list-group-item">
-        <div class="row">
-            <div class="col-md-1"> 
-                <h1 class="list-group-item-heading">
-                    <span class="label label-gravity1 label-cirkel">1</span>
-                </h1>
-            </div>
-            <div class="col-md-1"></div>
-            <div class="col-md-11">
-                <h3 class="list-group-item-heading">Hall</h3>
-            </div>
-            <div class="col-md-1"></div>
-            <div class="col-md-11">
-                <p class="list-group-item-text">Something something sgbsbgr bsrgb bsrgb sbg bsrgb sbrg bsrgb srbg bsrgb sbgbsrgb srbg bsrgb srbg </p>
-            </div>
-        </div>
-
-    </a>
+  </div>
 </div>
 <nav>
     <ul class="pagination">

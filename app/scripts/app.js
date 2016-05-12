@@ -37,7 +37,7 @@ angular
         controller: 'OmDilemmaCtrl',
         controllerAs: 'om-dilemma'
       })
-      .when('/1', {
+      .when('/svar/:param', {
         templateUrl: 'views/svar-dilemma.html',
         controller: 'SvarDilemmaCtrl',
         controllerAs: 'svarDilemma'
@@ -46,6 +46,11 @@ angular
         templateUrl: 'views/me.html',
         controller: 'MeCtrl',
         controllerAs: 'me'
+      })
+      .when('/view', {
+        templateUrl: 'views/view.html',
+        controller: 'ViewCtrl',
+        controllerAs: 'view'
       })
       .otherwise({
         redirectTo: '/'

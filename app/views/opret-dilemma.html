@@ -10,7 +10,7 @@
 		<textarea ng-model="dilemma.desc" class="form-control noresize" rows="3" id="comment"></textarea>
 	</div>
 	<h3>Vælg alvorsgrad</h3>
-	<p>Her skal der stå eb beskrivende tekst om hvad alvorsgrad er!</p>
+	<p>Her skal der stå en beskrivende tekst om hvad alvorsgrad er!</p>
 	<div class="row grid5">
 		<div class="col-md-1 text-center">
 			<button type="button" class="btn btn-circle btn-gravity1" ng-class="{true: '', false: 'active'}[dilemma.alvor!=1]" ng-click="dilemma.alvor = 1">1</button>
@@ -127,7 +127,7 @@
 	<br><br>
 	<div class="row">
 		<div class="col-md-12 text-center">
-			<button type="submit" class="btn btn-success btn-lg" ng-clicl="create(dilemma)">Opret Dilemma</button>
+			<button type="submit" class="btn btn-success btn-lg" ng-click="create(dilemma)">Opret Dilemma</button>
 		</div>
 	</div>
 	<br><br>
