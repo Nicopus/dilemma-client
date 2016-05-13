@@ -1,12 +1,12 @@
 # dilemma
 
-This project is mad by:\n
-s14487, s133974 & s144884\n
-project for Distributed Systems [02342]\n
+This project is mad by:<br />
+s14487, s133974 & s144884<br />
+project for Distributed Systems [02342]<br />
 ##tools
--angular\n
--grunt\n
--yeoman\n
+-angular<br />
+-grunt<br />
+-yeoman<br />
 This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
 version 0.15.1.
 
