@@ -48,7 +48,7 @@ angular.module('dilemmaApp')
           localStorageService.set('tok', token.toString());
         }
         else {
-          $scope.user.username = "wrong";
+          $scope.user.username = data.error;
         }
       }).error(function(data, status, headers, config){
         $scope.user.username = "error";
