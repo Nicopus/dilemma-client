@@ -8,7 +8,7 @@
  * Controller of the dilemmaApp
  */
 angular.module('dilemmaApp')
-  .controller('LoginCtrl', function ($scope, $http, localStorageService) {
+  .controller('LoginCtrl', function ($scope, $http, localStorageService, CONF) {
 
     const login_html =
     '<form novalidate class="navbar-form navbar-right">'+
@@ -37,7 +37,7 @@ angular.module('dilemmaApp')
 
 
     $scope.login = function(user){
-      $http.post("http://localhost:3001/login", {"user" : user.username, "password" : user.password}).
+      $http.post(CONF.rest_server + CONF.rest_call_login, {"user" : user.username, "password" : user.password}).
       success(function(data, status, headers, config){
         var token = data.token;
         if(token){

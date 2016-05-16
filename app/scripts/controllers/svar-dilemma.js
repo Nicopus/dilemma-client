@@ -8,11 +8,11 @@
  * Controller of the dilemmaApp
  */
  angular.module('dilemmaApp')
- .controller('SvarDilemmaCtrl', function ($scope, $routeParams, $http, localStorageService) {
+ .controller('SvarDilemmaCtrl', function ($scope, $routeParams, $http, localStorageService, CONF) {
    var id = $routeParams.param;
-   var irl = "http://localhost:3001/r/get/" + id;
-   var irl_stat = "http://localhost:3001/r/getstat/" + id;
-   var irl_answered = "http://localhost:3001/d/already/" + id;
+   var irl = CONF.rest_server + CONF.rest_call_get + id;
+   var irl_stat = CONF.rest_server + CONF.rest_call_getstat + id;
+   var irl_answered = CONF.rest_server + CONF.rest_call_already + id;
 
 
    var callback = function (data) {
@@ -34,7 +34,7 @@
    $scope.vote = function (answer_id) {
      $scope.test = answer_id;
      $http({
-       url : "http://localhost:3001/d/answer/" + id + "/" + answer_id,
+       url : CONF.rest_server + CONF.rest_call_answer + id + "/" + answer_id,
        method : "POST",
        params : {},
        data : {

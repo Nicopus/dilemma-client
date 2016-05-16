@@ -8,7 +8,7 @@
  * Controller of the dilemmaApp
  */
  angular.module('dilemmaApp')
- .controller('OpretDilemmaCtrl', function ($window, $scope, $http, $timeout, localStorageService, Upload) {
+ .controller('OpretDilemmaCtrl', function ($window, $scope, $http, $timeout, localStorageService, Upload, CONF) {
 
  $scope.dilemma = {
    quest : '',
@@ -67,7 +67,7 @@ if($scope.dilemmaForm.opt5.$valid) {
 
 
   Upload.upload({
-   url : 'http://localhost:3001/d/opret',
+   url : CONF.rest_server + CONF.rest_call_form_create,
    headers : {'token' : localStorageService.get('tok')},
    transformRequest: angular.identity,
    objectKey : '.k',

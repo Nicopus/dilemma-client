@@ -8,7 +8,7 @@
  * Controller of the dilemmaApp
  */
 angular.module('dilemmaApp')
-  .controller('MainCtrl', function ($scope, $http) {
+  .controller('MainCtrl', function ($scope, $http, CONF) {
 
     var site = '';
 
@@ -47,7 +47,7 @@ angular.module('dilemmaApp')
 
 
     $http({
-      url : "http://localhost:3001/r/getall",
+      url : CONF.rest_server + CONF.rest_call_getAll,
       method : "GET",
       params : {}
     })

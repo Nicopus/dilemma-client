@@ -8,12 +8,12 @@
  * Controller of the dilemmaApp
  */
 angular.module('dilemmaApp')
-  .controller('MeCtrl', function ($scope, $http, localStorageService) {
+  .controller('MeCtrl', function ($scope, $http, localStorageService, CONF) {
 
     //$scope.user = {name: localStorageService.get('tok')};
 
     $http({
-      url : "http://localhost:3001/d/me",
+      url : CONF.rest_server + CONF.rest_call_me,
       method : "GET",
       params : {token : localStorageService.get('tok')}
     })
