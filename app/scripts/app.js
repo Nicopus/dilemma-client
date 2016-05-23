@@ -22,10 +22,11 @@ angular
   ])
   .constant('CONF', {
     rest_server : "http://ec2-52-33-27-92.us-west-2.compute.amazonaws.com:3001",
+    //rest_server : "http://localhost:3001",
     rest_call_login : "/login",
     rest_call_getAll : "/r/getall",
     rest_call_me : "/d/me",
-    rest_call_form_create : "/d/opret",
+    rest_call_form_create : "/f/opret",
     rest_call_get : "/r/get/",
     rest_call_getstat : "/r/getstat/",
     rest_call_already : "/d/already/",

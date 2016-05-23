@@ -68,7 +68,7 @@ if($scope.dilemmaForm.opt5.$valid) {
 
   Upload.upload({
    url : CONF.rest_server + CONF.rest_call_form_create,
-   headers : {'token' : localStorageService.get('tok')},
+   headers : {},
    transformRequest: angular.identity,
    objectKey : '.k',
    arrayKey : '[i]',
